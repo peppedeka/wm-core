@@ -1,5 +1,5 @@
 import {CommonModule} from '@angular/common';
-import {HttpClient} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {IonicModule} from '@ionic/angular';
 import {EffectsModule} from '@ngrx/effects';
@@ -34,6 +34,12 @@ import {WmTrackEdgesComponent} from './track-edges/track-edges.component';
 import {WmInnerHtmlComponent} from './inner-html/inner-html.component';
 import {ButtonsModule} from './buttons/export-to/buttons.module';
 import { WmTrackDownloadUrlsComponent } from './track-download-urls/track-download-urls.component';
+import { AuthInterceptor } from './store/auth/auth.interceptor';
+import { AuthEffects } from './store/auth/auth.effects';
+import { authReducer } from './store/auth/auth.reducer';
+import { ModalHeaderComponent } from './modal-header/modal-header.component';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export function httpTranslateLoader(http: HttpClient): any {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -55,7 +61,9 @@ const declarations = [
   WmHomeLayerComponent,
   WmTrackEdgesComponent,
   WmInnerHtmlComponent,
-  WmTrackDownloadUrlsComponent
+  WmTrackDownloadUrlsComponent,
+  LoginComponent,
+  ModalHeaderComponent
 ];
 const modules = [
   WmSharedModule,
@@ -64,6 +72,7 @@ const modules = [
   ButtonsModule,
   WmLocalizationModule,
   WmFiltersModule,
+  ReactiveFormsModule,
 ];
 
 @NgModule({
@@ -74,7 +83,8 @@ const modules = [
       IonicModule,
       StoreModule.forFeature('query', elasticQueryReducer),
       StoreModule.forFeature('conf', confReducer),
-      EffectsModule.forFeature([ApiEffects, ConfEffects]),
+      StoreModule.forFeature('auth', authReducer),
+      EffectsModule.forFeature([ApiEffects, ConfEffects, AuthEffects]),
       TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,
@@ -85,7 +95,10 @@ const modules = [
     ],
     ...modules,
   ],
-  providers: [LangService],
+  providers: [
+    LangService,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+  ],
   exports: [...declarations, ...modules, TranslateModule],
 })
 export class WmCoreModule {}

@@ -1,0 +1,90 @@
+<wm-modal-header
+  class="wm-login-header"
+  [title]="'Accedi' | wmtrans"
+  (dismiss)="dismiss()"
+>
+</wm-modal-header>
+<ion-content scrollY="false">
+  <form class="wm-login-form" (ngSubmit)="login()" [formGroup]="loginForm">
+    <h1>
+      {{ "Bentornato!" | wmtrans }}
+    </h1>
+    <p>
+      {{ "Accedi con le tue credenziali per continuare." | wmtrans }}
+    </p>
+
+    <div class="wm-login-field-container">
+      <ion-label class="wm-login-label">
+        {{ "E-mail" | wmtrans }}
+      </ion-label>
+      <ion-item
+        class="wm-login-field"
+        [ngClass]="{
+          'wm-login-field-has-error':
+          (submitted$|async) && !!errorControl.email.errors
+        }"
+      >
+        <ion-input
+          type="text"
+          inputmode="email"
+          required
+          #email
+          class="wm-login-input"
+          formControlName="email"
+        ></ion-input>
+      </ion-item>
+      <ng-container *ngIf="(submitted$|async) && !!errorControl.email.errors">
+        <span class="wm-login-field-error" *ngIf="errorControl.email.errors?.required">
+          {{ "L'e-mail è obbligatoria" | wmtrans }}
+        </span>
+        <span class="wm-login-field-error" *ngIf="errorControl.email.errors?.email">
+          {{ "Hai inserito un'e-mail non valida" | wmtrans }}
+        </span>
+      </ng-container>
+    </div>
+    <div class="wm-login-field-container">
+      <ion-label class="wm-login-label">
+        {{ "Password" | wmtrans }}
+      </ion-label>
+      <ion-item
+        class="wm-login-field"
+        [ngClass]="{
+          'wm-login-field-has-error':
+          (submitted$|async) && !!errorControl.password.errors
+        }"
+      >
+        <ion-input
+          [type]="(showPassword$|async) ? 'text' : 'password'"
+          required="true"
+          #password
+          class="wm-login-input"
+          formControlName="password"
+        ></ion-input>
+        <ion-button
+          class="wm-login-input-button"
+          slot="end"
+          (click)="togglePasswordVisibility()"
+        >
+          <ion-icon [name]="(showPassword$|async) ? 'eye-off-outline' : 'eye-outline'"> </ion-icon>
+        </ion-button>
+      </ion-item>
+      <ng-container *ngIf="(submitted$|async) && !!errorControl.password.errors">
+        <span class="wm-login-field-error" *ngIf="errorControl.password.errors?.required">
+          {{ "La password è obbligatoria" | wmtrans }}
+        </span>
+      </ng-container>
+    </div>
+    <div class="wm-login-buttons-container">
+      <button class="wm-login-submit-button">
+        {{ "Accedi" | wmtrans }}
+      </button>
+      <button
+        type="button"
+        (click)="openUrl('https://geohub.webmapp.it/password/reset')"
+        class="wm-login-forgot-password-button"
+      >
+        {{ "Hai dimenticato la password?" | wmtrans }}
+      </button>
+    </div>
+  </form>
+</ion-content>
