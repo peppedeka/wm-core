@@ -63,5 +63,13 @@ export const wmPR = {
   'Password': 'Senha',
   'La password è obbligatoria': 'A senha é obrigatória',
   'Accedi': 'Conecte-se',
-  'Hai dimenticato la password?': 'Esqueceu-se da sua senha?'
+  'Hai dimenticato la password?': 'Esqueceu-se da sua senha?',
+  'Accedi e scarica i tuoi percorsi preferiti': 'Aceda e descarregue os seus percorsi preferidos',
+  'Puoi anche condividerli con i tuoi compagni di viaggio': 'Também pode dividir com os seus companheiros de viagem',
+  'Registrati': 'Registrando',
+  'Tracce scaricate': 'Rastreamento escaricado',
+  'Utilizzo dati': 'Utilizo dados',
+  'Registrazioni': 'Registros',
+  'Photos': 'Photos',
+  'Waypoint': 'Waypoint',
 };

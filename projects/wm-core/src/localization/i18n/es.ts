@@ -63,5 +63,13 @@ export const wmES = {
   'Password': 'Contraseña',
   'La password è obbligatoria': 'La contraseña es obligatoria',
   'Accedi': 'Acceso',
-  'Hai dimenticato la password?': '¿Has olvidado tu contraseña?'
+  'Hai dimenticato la password?': '¿Has olvidado tu contraseña?',
+  'Accedi e scarica i tuoi percorsi preferiti': 'Inicia sesión y descarga tus rutas favoritas',
+  'Puoi anche condividerli con i tuoi compagni di viaggio': 'También puedes compartirlos con tus compañeros de viaje.',
+  'Registrati': 'Regístrate',
+  'Tracce scaricate': 'Pistas descargadas',
+  'Utilizzo dati': 'Uso de datos',
+  'Registrazioni': 'Grabaciones',
+  'Photos': 'Photos',
+  'Waypoint': 'Waypoint',
 };

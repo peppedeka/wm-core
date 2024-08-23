@@ -64,5 +64,13 @@ export const wmDE = {
   'Password': 'Passwort',
   'La password è obbligatoria': 'Passwort erforderlich ist',
   'Accedi': 'Login',
-  'Hai dimenticato la password?': 'Sie haben Ihr Passwort vergessen?'
+  'Hai dimenticato la password?': 'Sie haben Ihr Passwort vergessen?',
+  'Accedi e scarica i tuoi percorsi preferiti': 'Greifen Sie auf Ihre Lieblingsrouten zu und laden Sie sie herunter',
+  'Puoi anche condividerli con i tuoi compagni di viaggio': 'Sie können sie auch mit Ihren Reisebegleitern teilen',
+  'Registrati': 'Melden Sie sich an',
+  'Tracce scaricate': 'Heruntergeladene Titel',
+  'Utilizzo dati': 'Datennutzung',
+  'Registrazioni': 'Aufzeichnungen',
+  'Photos': 'Photos',
+  'Waypoint': 'Waypoint',
 };

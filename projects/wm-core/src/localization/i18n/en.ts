@@ -73,5 +73,13 @@ export const wmEN = {
   'Password': 'Password',
   'La password è obbligatoria': 'Password is required',
   'Accedi': 'Login',
-  'Hai dimenticato la password?': 'Did you forget your password?'
+  'Hai dimenticato la password?': 'Did you forget your password?',
+  'Accedi e scarica i tuoi percorsi preferiti': 'Access and download your favorite routes',
+  'Puoi anche condividerli con i tuoi compagni di viaggio': 'You can also share them with your travel companions',
+  'Registrati': 'Sign up',
+  'Tracce scaricate': 'Downloaded tracks',
+  'Utilizzo dati': 'Data usage',
+  'Registrazioni': 'Records',
+  'Photos': 'Photos',
+  'Waypoint': 'Waypoint',
 };

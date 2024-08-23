@@ -56,7 +56,6 @@ export const wmFR = {
   'Caricamento in corso.': 'Chargement.',
   'Spiacenti non ci sono risultati con questi criteri di ricerca.':
     "Désolé, il n'y a aucun résultat avec ces critères de recherche",
-
   'Bentornato!': 'Bienvenue!',
   'Accedi con le tue credenziali per continuare.': 'Connectez-vous avec vos identifiants pour continuer.',
   'E-mail': 'E-mail',
@@ -65,5 +64,14 @@ export const wmFR = {
   'Password': 'Mot de passe',
   'La password è obbligatoria': 'Mot de passe requis',
   'Accedi': 'Connexion',
-  'Hai dimenticato la password?': 'Avez-vous oublié votre mot de passe?'
+  'Hai dimenticato la password?': 'Avez-vous oublié votre mot de passe?',
+
+  'Accedi e scarica i tuoi percorsi preferiti': 'Accédez et téléchargez vos itinéraires favoris',
+  'Puoi anche condividerli con i tuoi compagni di viaggio': 'Vous pouvez également les partager avec vos compagnons de voyage',
+  'Registrati': 'S\'inscrire',
+  'Tracce scaricate': 'Traces téléchargées',
+  'Utilizzo dati': 'Utilisation de données',
+  'Registrazioni': 'Archives',
+  'Photos': 'Photos',
+  'Waypoint': 'Waypoint',
 };

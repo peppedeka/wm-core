@@ -70,5 +70,15 @@ export const wmIT = {
   'Password': 'Password',
   'La password è obbligatoria': 'La password è obbligatoria',
   'Accedi': 'Accedi',
-  'Hai dimenticato la password?': 'Hai dimenticato la password?'
+  'Hai dimenticato la password?': 'Hai dimenticato la password?',
+
+  'Accedi e scarica i tuoi percorsi preferiti': 'Accedi e scarica i tuoi percorsi preferiti',
+  'Puoi anche condividerli con i tuoi compagni di viaggio': 'Puoi anche condividerli con i tuoi compagni di viaggio',
+  'Registrati': 'Registrati',
+  'Tracce scaricate': 'Tracce scaricate',
+  'Utilizzo dati': 'Utilizzo dati',
+  'Registrazioni': 'Registrazioni',
+  'Photos': 'Foto',
+  'Waypoint': 'Waypoint',
+  'elimina': 'elimina'
 };
