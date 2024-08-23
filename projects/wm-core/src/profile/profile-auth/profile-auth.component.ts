@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
 import {select, Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
@@ -11,6 +11,9 @@ import {isLogged} from 'wm-core/store/auth/auth.selectors';
   styleUrls: ['./profile-auth.component.scss'],
 })
 export class ProfileAuthComponent {
+  @Input() slide1: string;
+  @Input() slide2: string;
+
   isLogged$: Observable<boolean> = this._store.pipe(select(isLogged));
   loggedOutSliderOptions: any;
 

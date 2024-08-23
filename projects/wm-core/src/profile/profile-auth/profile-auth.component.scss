@@ -29,7 +29,7 @@
   }
 }
 
-.webmapp-profile-logged-out-login-buttons-container {
+.wm-profile-logged-out-login-buttons-container {
   display: grid;
   position: absolute;
   bottom: 0;
@@ -38,8 +38,8 @@
   z-index: 2000;
   grid-template-columns: auto auto auto;
   padding-bottom: 20px;
-  .webmapp-profile-logged-out-login-button,
-  .webmapp-profile-logged-out-signup-button {
+  .wm-profile-logged-out-login-button,
+  .wm-profile-logged-out-signup-button {
     grid-column-start: 2;
     grid-column-end: 2;
     font-size: var(--wm-font-md);
@@ -48,11 +48,11 @@
     margin: 10px;
     border: 1px solid var(--wm-color-primary);
   }
-  .webmapp-profile-logged-out-login-button {
+  .wm-profile-logged-out-login-button {
     background: var(--wm-color-primary);
     color: var(--wm-color-light);
   }
-  .webmapp-profile-logged-out-signup-button {
+  .wm-profile-logged-out-signup-button {
     background: var(--wm-color-light);
     color: var(--wm-color-primary);
   }
